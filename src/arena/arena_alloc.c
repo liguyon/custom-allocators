@@ -6,7 +6,7 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 02:12:48 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/06 03:30:05 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/06 03:35:06 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static uintptr_t	align_forward(uintptr_t ptr, size_t align)
 	uintptr_t	p;
 	uintptr_t	a;
 	uintptr_t	modulo;
-	
+
 	if (!is_power_of_two(align))
 		exit(1);
 	p = ptr;
@@ -55,7 +55,7 @@ void	*arena_alloc(t_arena *a, size_t size)
 	void		*ptr;
 
 	curr_ptr = (uintptr_t)a->buf + (uintptr_t)a->curr_offset;
-	offset = align_forward(curr_ptr, sizeof(void*));
+	offset = align_forward(curr_ptr, sizeof(void *));
 	offset -= (uintptr_t)a->buf;
 	if (offset + size > a->buf_size)
 		return (NULL);

@@ -6,12 +6,11 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:17:57 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/06 03:30:11 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/06 03:34:42 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "allocators.h"
-
 
 void	arena_init(t_arena *a, void *buffer, size_t buffer_size)
 {
