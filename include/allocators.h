@@ -6,7 +6,7 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:45:34 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/06 03:21:19 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/10 13:47:51 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ struct s_arena
 void		arena_init(t_arena *a, void *buffer, size_t buffer_size);
 void		arena_reset(t_arena *a);
 void		*arena_alloc(t_arena *a, size_t size);
+void		arena_destroy(t_arena *a);
 // wth with this rule in the norm...
 /*
 	A temporary arena memory savepoint

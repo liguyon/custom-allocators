@@ -6,7 +6,7 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:17:57 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/06 03:34:42 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/10 13:47:11 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ void	arena_reset(t_arena *a)
 {
 	a->curr_offset = 0;
 	a->prev_offset = 0;
+}
+
+void	arena_destroy(t_arena *a)
+{
+	arena_reset(a);
+	if (a->buf)
+		free(a->buf);
 }
 
 t_tmp_arena	temp_arena_memory_begin(t_arena *a)
