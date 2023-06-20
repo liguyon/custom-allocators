@@ -6,7 +6,7 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:17:57 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/20 15:47:27 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/20 15:52:44 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*arena_init(size_t buffer_size)
 	t_arena	*a;
 	void	*buf;
 
-	buf = malloc(sizeof(buffer_size));
+	buf = malloc(buffer_size);
 	if (!buf)
 		return (NULL);
 	a = malloc(sizeof(t_arena));
