@@ -6,7 +6,7 @@
 #    By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/06 02:18:30 by liguyon           #+#    #+#              #
-#    Updated: 2023/06/06 15:07:51 by liguyon          ###   ########.fr        #
+#    Updated: 2023/06/20 14:26:24 by liguyon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,13 @@
 NAME		:= liballocators.a
 
 # Includes
-INC_DIR		:= include
+INC_DIR		:= src
 
 # Sources
 SRC_DIR		:= src
 
 SRC			:= arena/arena.c \
-				arena/arena_alloc.c \
-
+			   arena/arena_alloc.c \
 
 # Objects
 OBJ_DIR		:= .build

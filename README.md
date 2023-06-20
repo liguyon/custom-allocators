@@ -1,4 +1,3 @@
-# custom-allocators
-A collection of memory allocators for use in projects at School 42.
+A collection of custom memory allocators.
 
 Check out the [Memory Allocation Stategies](https://www.gingerbill.org/series/memory-allocation-strategies/) series on gingerBill.

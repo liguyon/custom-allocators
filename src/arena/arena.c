@@ -6,14 +6,23 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:17:57 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/10 13:47:11 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/20 14:30:06 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "allocators.h"
 
-void	arena_init(t_arena *a, void *buffer, size_t buffer_size)
+void	*arena_init(size_t buffer_size)
 {
+	t_arena	*a;
+	void	*buf;
+
+	buf = malloc(sizeof(buffer_size));
+	if (!buf)
+		return (NULL);
+	a = malloc(sizeof(t_arena));
+	if (!a)
+		return (NULL);
 	a->buf = buffer;
 	a->buf_size = buffer_size;
 	a->curr_offset = 0;
@@ -31,20 +40,5 @@ void	arena_destroy(t_arena *a)
 	arena_reset(a);
 	if (a->buf)
 		free(a->buf);
-}
-
-t_tmp_arena	temp_arena_memory_begin(t_arena *a)
-{
-	t_tmp_arena	temp;
-
-	temp.arena = a;
-	temp.curr_offset = a->curr_offset;
-	temp.prev_offset = a->prev_offset;
-	return (temp);
-}
-
-void	temp_arena_memory_end(t_tmp_arena temp)
-{
-	temp.arena->curr_offset = temp.curr_offset;
-	temp.arena->prev_offset = temp.prev_offset;
+	free(a);
 }
