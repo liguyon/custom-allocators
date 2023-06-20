@@ -6,11 +6,11 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 02:12:48 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/20 14:24:56 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/20 15:46:33 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "allocators.h"
+#include "arena.h"
 #include <stdint.h>
 
 static void	*arena_memset(void *s, int c, size_t n)

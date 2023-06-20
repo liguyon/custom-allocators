@@ -6,12 +6,13 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 14:19:25 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/20 14:23:39 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/20 15:46:42 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARENA_H
 # define ARENA_H
+#include <stdlib.h>
 
 typedef struct s_arena		t_arena;
 struct s_arena

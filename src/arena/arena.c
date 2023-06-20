@@ -6,11 +6,11 @@
 /*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 20:17:57 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/20 14:30:06 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/20 15:47:27 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "allocators.h"
+#include "arena.h"
 
 void	*arena_init(size_t buffer_size)
 {
@@ -23,10 +23,11 @@ void	*arena_init(size_t buffer_size)
 	a = malloc(sizeof(t_arena));
 	if (!a)
 		return (NULL);
-	a->buf = buffer;
+	a->buf = buf;
 	a->buf_size = buffer_size;
 	a->curr_offset = 0;
 	a->prev_offset = 0;
+	return (a);
 }
 
 void	arena_reset(t_arena *a)
